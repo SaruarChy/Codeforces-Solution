@@ -1,29 +1,26 @@
 #include<bits/stdc++.h>
 using namespace std;
+
+void solve()
+{
+
+    long long a,b;
+    cin>>a>>b;
+    if((a-b)>1)
+        cout<<"YES\n";
+    else
+        cout<<"NO\n";
+
+}
 int main()
 {
+
     int t;
+    t=1;
     cin>>t;
     while(t--)
     {
-        int flag=0;
-        int a[ ]={2,3,5,7,11};
-        long long x,y,c,i;
-        cin>>x>>y;
-        c=x-y;
-        for(i=0; i<5; i++)
-        {
-            if(c%a[i]==0)
-                flag=;
-            else
-            {
-                flag=1;
-                continue;
-            }
-        }
-        if(flag==0)
-            cout<<"Yes"<<endl;
-        else
-            cout<<"No"<<endl;
+        solve();
     }
+    return 0;
 }
