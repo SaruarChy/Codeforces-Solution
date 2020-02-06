@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-//we have to find if i flew more times from San to Francisco
+//we have to find if we flew more times from San to Francisco
 int main()
 {
     int n,StoF=0,FtoS=0;
