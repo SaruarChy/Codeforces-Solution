@@ -8,12 +8,12 @@ int main()
     cin>>t;
     while(t--)
     {
-        float sum=0,avg=0;
+        //float sum=0,avg=0;
         cin>>n>>m;
         for(int i=0; i<n; i++)
         {
             cin>>a[i];
-            sum+=a[i];
+            //sum+=a[i];
         }
         //avg=sum;
         for(int i=0; i<n; i++)
@@ -41,3 +41,24 @@ int main()
     }
     return 0;
 }
+/* After contest solution
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,m,n,a,sum;
+    cin>>t;
+    while(t--)
+    {
+        sum=0;
+        cin>>n>>m;
+        for(int i=0; i<n; i++){
+            cin>>a;
+            sum+=a;
+        }
+        cout<<min(m,sum)<<endl;
+    }
+    return 0;
+}
+*/
