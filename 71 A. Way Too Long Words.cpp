@@ -1,5 +1,7 @@
-#include<stdio.h>
-#include<string.h>
+//Bismillahir Rahmanir Rahim
+#include<bits/stdc++.h>
+using namespace std;
+
 int main()
 {
     int n,i,l;
@@ -18,4 +20,13 @@ int main()
         else
             printf("%s\n",s);
     }
-
+    return 0;
+}
+/*
+SIMPLE INPUT
+4
+word
+localization
+internationalization
+pneumonoultramicroscopicsilicovolcanoconiosis
+*/
