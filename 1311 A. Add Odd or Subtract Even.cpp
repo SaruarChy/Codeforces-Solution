@@ -3,32 +3,39 @@ using namespace std;
 int main()
 {
     int t;
+    long long int a,b,ans,dis;
     cin>>t;
-    int a,b,get,ans;
-    while(t--)
-    {
-        get=ans=0;
+    while(t--){
+        ans=dis=0;
         cin>>a>>b;
-        if(a==b)
-        {
-            cout<<0<<endl;
+        if(a == b){
+            cout<<0<<"\n";
             continue;
         }
-        else if(a<b)
-        {
-            get=b-a;
+        if(a>b){
+            dis=a - b;
             ans++;
-            if(get%2==0)
+            if(dis % 2 !=0){
                 ans++;
+            }
         }
-        else if(a>b)
-        {
-            get=a-b;
+        else if(a < b){
+            dis= b - a;
             ans++;
-            if(get%2!=0)
+            if(dis % 2 != 1){
                 ans++;
+            }
         }
-        cout<<ans<<endl;
+        cout<<ans<<"\n";
     }
     return 0;
 }
+/*
+SIMPLE IMPUT
+5
+2 3
+10 10
+2 4
+7 4
+9 3
+*/
