@@ -1,35 +1,38 @@
-//Bismillahir Rahmanir Rahim
-#include<bits/stdc++.h>
-#define ll long long
-#define ull unsigned long long
+#include <iostream>
+#include <map>
+#include <iterator>
+
 using namespace std;
+
 int main()
 {
-    int n,a[1001],b[1001],ans = 0;
-    cin>>n;
-    for(int i=0; i<n; i++){
-        cin>>a[i];
-        b[i] = a[i];
-    }
-    sort(b,b+n,greater<int>());
-    for(int i=0; i<n; i++){
-        if(i == 0){
-            ans++;
-        }
-        else{
-            ans += b[i] * i + 1;
-        }
-    }
-    cout<<ans<<endl;
-    for(int i=0; i<n; i++){
-        for(int j=0; j<n; j++){
-            if(b[i] == a[j]){
-                a[j] = 0;
-                cout<<j+1<<" ";
-                break;
-            }
-        }
-    }cout<<endl;
+    int n,sum=0;
+    multimap<int, int> map;
 
-    return 0;
+    //insertion from user i/p
+    cin>>n;
+    int a,i=0,arr[1000],b[1000];
+    for(i=1; i<=n; i++)
+    {
+       cin >> a;  
+       map.insert(make_pair(a, i));
+    }
+    i=0;
+    for(auto itr=map.begin(); itr != map.end(); itr++)
+    {
+        arr[i] = itr->first;
+        b[i] = itr->second;
+        i++;
+    }
+    int j = 0;
+    for(i=n-1; i>=0; i--)
+    {
+        sum += arr[i]*j + 1;
+        j++;
+    }
+    cout << sum << endl;
+    for(i=n-1; i>=0; i--)
+    {
+        cout << b[i] << " ";
+    }
 }
