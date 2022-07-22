@@ -40,3 +40,43 @@ int main()
     }
 }
 
+
+//Java
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class roundNum {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        LinkedList<Integer> list = new LinkedList<>();
+        int n = input.nextInt();
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = input.nextInt();
+        }
+        int mod, x = 1, count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            while (arr[i] > 0) {
+                x = x * 10;
+                mod = arr[i] % x;
+                if (mod != 0) {
+                    arr[i] = arr[i] - mod;
+                    count++;
+                    list.addFirst(mod);
+                }
+            }
+            list.addFirst(count);
+            Iterator itr = list.iterator();
+            while (itr.hasNext()) {
+                System.out.println(itr.next());
+            }
+            list.clear();
+            count = 0;
+            x = 1;
+        }
+
+    }
+
+}
